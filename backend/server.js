@@ -9,7 +9,15 @@ const todoRoutes = require("./routes/todoRoutes");
 
 const app = express();
 
-app.use(cors());
+/* ================= CORS CONFIG ================= */
+const corsOptions = {
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
 /* ================= ROUTES ================= */
