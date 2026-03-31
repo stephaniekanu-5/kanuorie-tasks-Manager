@@ -7,7 +7,10 @@
 }
 
 body {
-  background: linear-gradient(135deg, #e9eef2, #f7f9fb);
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: #fff;
 }
 /* AUTH PAGES */
 .auth-container {
@@ -18,6 +21,7 @@ body {
 }
 
 .auth-card {
+  color: #333;
   background: white;
   padding: 40px;
   border-radius: 12px;
@@ -125,6 +129,7 @@ body {
   color: white;
   cursor: pointer;
   transition: background 0.2s;
+  margin-bottom: 10px;
 }
 
 .column button:hover {
@@ -142,6 +147,7 @@ body {
   justify-content: space-between;
   align-items: center;
   transition: all 0.2s ease;
+  color: #333;
 }
 
 /* Hover effect */
@@ -178,6 +184,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  color: black;
 }
 
 .header h2 {
@@ -208,7 +215,7 @@ body {
   font-size: 22px;
   background: none;
   border: none;
-  color: #333;
+  color: white;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -277,10 +284,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111827;
   padding: 15px 30px;
-  color: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background: #020617;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
@@ -304,18 +311,6 @@ body {
   color: #38bdf8;
 }
 
-.logout-btn {
-  background: #ef4444;
-  border: none;
-  padding: 6px 12px;
-  color: white;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.logout-btn:hover {
-  background: #dc2626;
-}
 .user-email {
   color: #38bdf8;
   font-size: 14px;
@@ -349,6 +344,48 @@ body {
 .hero button:hover {
   transform: scale(1.05);
 }
+.secondary-btn {
+  margin-left: 10px;
+  color: #3b82f6;
+  text-decoration: none;
+}
+/* HERO */
+.premium-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 40px;
+}
+
+.hero-left {
+  max-width: 500px;
+}
+
+.hero-right {
+  display: flex;
+  gap: 15px;
+}
+
+.mock-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+/* GLASS CARDS */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* CTA */
+.premium-cta {
+  text-align: center;
+  padding: 60px;
+}
 
 /* FEATURES */
 .features {
@@ -357,9 +394,15 @@ body {
   padding: 50px;
   justify-content: center;
 }
-
+.section-title {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
 .card {
-  background: white;
+  color: white;
+  background: #4CAF50;
   padding: 25px;
   border-radius: 12px;
   width: 220px;
@@ -369,6 +412,40 @@ body {
 
 .card:hover {
   transform: translateY(-5px);
+}
+/* TESTIMONIALS */
+.testimonials {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #ddd;
+}
+
+.testimonial-card h4 {
+  margin-top: 10px;
+  color: #3b82f6;
 }
 
 /* CTA */
@@ -451,4 +528,44 @@ body {
     flex-direction: column;
     align-items: center;
   }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+   .nav-links {
+    margin-top: 10px;
+  }
+
+  .auth-buttons {
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links,
+  .auth-buttons {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.active,
+  .auth-buttons.active {
+    display: flex;
+  }
+
+  .premium-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-right {
+    margin-top: 20px;
+  }
+
 }
